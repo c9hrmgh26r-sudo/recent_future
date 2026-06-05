@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recent Future</title>
+  <meta name="description" content="Recent Future — building what comes next." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== Nav ===== -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Recent Future — home">
+      <img src="rf_logo.png" alt="Recent Future" class="nav__logo-img" />
+      <span class="nav__logo-text">Recent Future</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#appointments">Book</a>
+      <a href="#merch">Shop</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav__menu" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== Hero with YouTube background ===== -->
+  <section class="hero" id="top">
+    <div class="hero__video">
+      <video
+        id="bg-video"
+        autoplay muted loop playsinline preload="auto">
+        <source src="videos/AAP%20Rocky%20-%20Kids%20Turned%20Out%20Fine%20(Official%20Video)%20-%20LIVELOVEASAPVEVO%20(1080p,%20h264,%20youtube).mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">Studio &middot; Strategy &middot; Build</p>
+      <h1 class="hero__title">Recent<br />Future</h1>
+      <p class="hero__sub">We design and build the things that come next.</p>
+      <a href="#work" class="hero__cta">See the work &rarr;</a>
+    </div>
+
+    <div class="hero__scroll">Scroll</div>
+  </section>
+
+  <!-- ===== Work ===== -->
+  <section class="section section--work" id="work">
+    <div class="section__head">
+      <span class="section__num">01</span>
+      <h2 class="section__title">Selected Work</h2>
+    </div>
+
+    <div class="work-grid">
+      <article class="work-card">
+        <div class="work-card__media">
+          <img src="project_posters/web/sunset-stranger-keyart.jpg" alt="The Sunset Stranger — theatrical poster" loading="lazy" />
+        </div>
+        <h3>The Sunset Stranger</h3>
+        <p>Theatrical poster</p>
+      </article>
+      <article class="work-card">
+        <div class="work-card__media">
+          <img src="project_posters/web/sunset-stranger-stills.jpg" alt="The Sunset Stranger — title card" loading="lazy" />
+        </div>
+        <h3>The Sunset Stranger</h3>
+        <p>Title card</p>
+      </article>
+      <article class="work-card">
+        <div class="work-card__media">
+          <img src="project_posters/web/sunset-stranger-promo.jpg" alt="The Sunset Stranger — promo series" loading="lazy" />
+        </div>
+        <h3>The Sunset Stranger</h3>
+        <p>Promo series</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="section section--about" id="about">
+    <div class="section__head">
+      <span class="section__num">02</span>
+      <h2 class="section__title">About</h2>
+    </div>
+    <div class="about">
+      <p class="about__lead">
+        Recent Future is a studio working at the intersection of design,
+        technology, and what's coming next.
+      </p>
+      <p class="about__body">
+        Replace this with the real story — who you are, what you make, and why
+        it matters. This block is a placeholder so you can see the layout and
+        rhythm of the page.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Appointments ===== -->
+  <section class="section section--appointments" id="appointments">
+    <div class="section__head">
+      <span class="section__num">03</span>
+      <h2 class="section__title">Book an Appointment</h2>
+    </div>
+
+    <div class="appointments">
+      <form class="appt-form" id="appt-form">
+        <div class="appt-form__row">
+          <label class="field">
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@email.com" required />
+          </label>
+        </div>
+
+        <div class="appt-form__row">
+          <label class="field">
+            <span>Date</span>
+            <input type="date" name="date" required />
+          </label>
+          <label class="field">
+            <span>Time</span>
+            <input type="time" name="time" required />
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Service</span>
+          <select name="service">
+            <option>Consultation</option>
+            <option>Studio session</option>
+            <option>Strategy call</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Notes</span>
+          <textarea name="notes" rows="4" placeholder="Anything we should know?"></textarea>
+        </label>
+
+        <button type="submit" class="btn">Request appointment</button>
+        <p class="appt-form__note" id="appt-note" hidden>Thanks — we'll be in touch to confirm your time.</p>
+      </form>
+
+      <aside class="appt-info">
+        <h3>How it works</h3>
+        <p>Pick a date and time that suits you and send a request. We'll confirm
+           by email within 24 hours.</p>
+        <ul>
+          <li>Mon–Fri, 9am – 6pm</li>
+          <li>Remote or in-studio</li>
+          <li>First consultation is free</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===== Merch ===== -->
+  <section class="section section--merch" id="merch">
+    <div class="section__head">
+      <span class="section__num">04</span>
+      <h2 class="section__title">Merch</h2>
+    </div>
+
+    <div class="merch-grid">
+      <article class="merch-card">
+        <div class="merch-card__media"></div>
+        <div class="merch-card__info">
+          <h3>RF Logo Tee</h3>
+          <span class="merch-card__price">$30</span>
+        </div>
+        <button class="btn btn--full">Add to cart</button>
+      </article>
+
+      <article class="merch-card">
+        <div class="merch-card__media"></div>
+        <div class="merch-card__info">
+          <h3>Hoodie</h3>
+          <span class="merch-card__price">$60</span>
+        </div>
+        <button class="btn btn--full">Add to cart</button>
+      </article>
+
+      <article class="merch-card">
+        <div class="merch-card__media"></div>
+        <div class="merch-card__info">
+          <h3>Cap</h3>
+          <span class="merch-card__price">$25</span>
+        </div>
+        <button class="btn btn--full">Add to cart</button>
+      </article>
+
+      <article class="merch-card">
+        <div class="merch-card__media"></div>
+        <div class="merch-card__info">
+          <h3>Sticker Pack</h3>
+          <span class="merch-card__price">$10</span>
+        </div>
+        <button class="btn btn--full">Add to cart</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="section section--contact" id="contact">
+    <div class="section__head">
+      <span class="section__num">05</span>
+      <h2 class="section__title">Get in touch</h2>
+    </div>
+    <div class="contact">
+      <a href="mailto:hello@Recentfuture.com" class="contact__email">hello@Recentfuture.com</a>
+      <div class="contact__socials">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>&copy; <span id="year"></span> Recent Future</span>
+    <a href="#top">Back to top &uarr;</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
